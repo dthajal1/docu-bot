@@ -7,9 +7,6 @@ from langchain_community.document_loaders import ReadTheDocsLoader
 from langchain_openai import OpenAIEmbeddings
 from langchain_pinecone import PineconeVectorStore
 
-embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
-
-
 def ingest_docs():
     '''
     This function will load, split into chunks, embed as vectors and store the vectors in Pinecone.
@@ -30,6 +27,7 @@ def ingest_docs():
 
     # Embed the chunks
     print(f"Going to add {len(documents)} to Pinecone")
+    embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
     PineconeVectorStore.from_documents(
         documents, embeddings, index_name="langchain-doc-index"
     )
