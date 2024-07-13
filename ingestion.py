@@ -11,8 +11,11 @@ def ingest_docs():
     '''
     This function will load, split into chunks, embed as vectors and store the vectors in Pinecone.
     '''
-    # Load the documents. 
-    path_to_docs = "langchain-docs/api.python.langchain.com/en/latest" # TODO: edit this to the path of the docs you want your bot to ingest
+
+    # TODO: edit this to be the path/to/your/docs
+    path_to_docs = "data/langchain-docs/api.python.langchain.com/en/latest" 
+
+    # Load the documents
     loader = ReadTheDocsLoader(path_to_docs)
     raw_documents = loader.load()
     print(f"loaded {len(raw_documents)} documents")
