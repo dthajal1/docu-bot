@@ -1,6 +1,8 @@
 # Docu-bot
 A GenAI powered Q&A bot for your documentation using LangChain, Pinecone and Streamlit.
 
+![Docu-bot](/static/imgs/prototype.png)
+
 ## Backend Architecture
 Here is the basic RAG architecture of our project.
 ![RAG Architecture](/static/imgs/rag_architecture.png)
