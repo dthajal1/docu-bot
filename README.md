@@ -37,6 +37,10 @@ Install the dependencies:
 ```python
 pipenv install
 ```
+Ingest the documentation data:
+```python
+pipenv run python ingestion.py
+```
 Run the app (flask and streamlit):
 ```python
 streamlit run main.py
